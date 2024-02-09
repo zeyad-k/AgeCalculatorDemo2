@@ -1,5 +1,5 @@
 const submitButton= document.querySelector('.card__button')
-const inputElement= document.querySelectorAll('.card__input')
+const inputElements= document.querySelectorAll('.card__input')
 
 const validateDay= (day)=>{
 if (day && day > 0 && day <= 31) {
@@ -75,5 +75,12 @@ resultElement.textContent = '--'
 	 resultElement.textContent = calculateAge(yearInput.value, monthInput.value,dayInput.value )
 // alert('you clicked me')
 }
+
+inputElements.forEach(element =>{
+	element.addEventListener('keydown',(event)=>{
+		// console.log(event.key)
+		event.key ==='Enter' && onclickFunction()
+	})
+})
 
 submitButton.addEventListener('click',onclickFunction)
