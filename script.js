@@ -80,6 +80,7 @@ inputElements.forEach(element =>{
 	element.addEventListener('keydown',(event)=>{
 		// console.log(event.key)
 		event.key ==='Enter' && onclickFunction()
+		// 123
 	})
 })
 
